@@ -1,0 +1,19 @@
+.notify-form {
+  font-family: "Raleway";
+
+  h2,
+  p {
+    font-family: inherit;
+  }
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+::ng-deep .snackbar {
+  background: #455a64;
+  color: #fff;
+}

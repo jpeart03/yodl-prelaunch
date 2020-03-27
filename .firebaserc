@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "yodl-temp": {
+      "hosting": {
+        "yodl-prelaunch": [
+          "yodl-temp"
+        ]
+      }
+    }
+  }
+}

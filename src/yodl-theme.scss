@@ -1,0 +1,69 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$yodl-blue: (50 : #e4f2fe,
+  100 : #bce0fb,
+  200 : #90cbf9,
+  300 : #64b6f7,
+  400 : #42a6f5,
+  500 : #2196f3,
+  600 : #1d8ef1,
+  700 : #1883ef,
+  800 : #1479ed,
+  900 : #0b68ea,
+  A100 : #ffffff,
+  A200 : #e1ecff,
+  A400 : #aeccff,
+  A700 : #95bcff,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  ));
+
+$yodl-gray: (50 : #e9ebec,
+  100 : #c7ced1,
+  200 : #a2adb2,
+  300 : #7d8c93,
+  400 : #61737b,
+  500 : #455a64,
+  600 : #3e525c,
+  700 : #364852,
+  800 : #2e3f48,
+  900 : #1f2e36,
+  A100 : #7dcdff,
+  A200 : #4abaff,
+  A400 : #17a7ff,
+  A700 : #009cfc,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #ffffff,
+  ));
+
+$my-app-primary: mat-palette($yodl-blue);
+$my-app-accent: mat-palette($yodl-gray);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent);
+
+@include angular-material-theme($my-app-theme);

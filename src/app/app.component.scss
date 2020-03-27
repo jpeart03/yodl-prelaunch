@@ -1,0 +1,114 @@
+$brand-color: #2196f3;
+
+.landing-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3rem 5rem 5rem 5rem;
+  animation: 0.5s fadein ease-in-out;
+
+  .landing-logo {
+    width: 25rem;
+    height: 9rem;
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .landing-heading {
+    width: 100%;
+    max-width: 75rem;
+    font-family: "Raleway";
+    margin-top: 7.5rem;
+    font-size: 5rem;
+    line-height: 6rem;
+    font-weight: 600;
+
+    &--underlined {
+      border-bottom: .3rem solid $brand-color;
+      padding-bottom: 3rem;
+    }
+  }
+
+  .landing-cta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7.5rem;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80rem;
+
+    &__graphic {
+      width: 35rem;
+    }
+
+    &__form {
+      padding-left: 12.5rem;
+      max-width: 28rem;
+      display: inline-block;
+      font-family: "Raleway";
+
+      button {
+        font-size: 1.8rem;
+        color: #fff;
+        background-color: $brand-color;
+        padding: 1rem 2rem;
+        box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.19),
+          0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
+        border-radius: 0.4rem;
+        margin-bottom: 1rem;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  &__background-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .landing-container {
+
+    .landing-cta {
+      &__graphic {
+        padding-right: 5rem;
+      }
+
+      &__form {
+        padding-left: 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 623px) {
+    .landing-container {
+
+      .landing-cta {
+        justify-content: center;
+
+        &__form {
+          padding-top: 5rem;
+        }
+      }
+    }
+  }
+}

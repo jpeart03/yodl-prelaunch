@@ -1,0 +1,19 @@
+<form class="notify-form" [formGroup]="notifyForm" (ngSubmit)="onNotify()">
+  <h2>Coming Soon...</h2>
+  <p>Be the first to get notified when Yodl launches</p>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [formControl]="notifyForm.controls.email" [errorStateMatcher]="matcher"
+      placeholder="Ex. you@mail.com">
+    <mat-error *ngIf="notifyForm.controls.email.hasError('email') && !notifyForm.controls.email.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="notifyForm.controls.email.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <button [disabled]="loading" type="submit" mat-raised-button color="primary">
+    Notify me on launch
+    <app-loading *ngIf="loading"></app-loading>
+  </button>
+</form>

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "yodl-prelaunch",
+      "public": "dist/yodl-prelaunch",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
