@@ -14,9 +14,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 
 import { NotifyComponent } from './notify/notify.component';
+import { LoadingComponent } from './loading/loading.component';
 
 import { environment } from '../environments/environment';
-import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
